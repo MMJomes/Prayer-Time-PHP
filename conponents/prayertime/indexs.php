@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <?php require_once 'includes/head.php'; ?>
+    <?php require_once '../../includes/head.php'; ?>
 </head>
 
 <body>
-    <?php require_once 'includes/header.php'; ?>
+    <?php require_once '../../includes/header.php'; ?>
     <div class="container-fluid">
         <div class="row">
-            <?php require_once 'includes/sidebar.php'; ?>
+            <?php require_once '../../includes/sidebar.php'; ?>
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="row" style="display: flex; align-items: center;">
                     <div class="col-md-6">
@@ -39,7 +39,7 @@
                             ini_set('display_errors', 1);
                             ini_set('display_startup_erros', 1);
                             error_reporting(E_ALL);
-                            include 'classes/song.php';
+                            include '../../classes/song.php';
                             session_start();
                             $objSong = new Song();
                             function retrievePrayerTimes($zone)
@@ -87,7 +87,7 @@
                                                 'date' => $innerArray['date'],
                                                 'zone' => $zone,
                                                 'name' => $innerArray,
-                                            ];
+                                            ];                               
                                             echo '<tr>';
                                             echo '<td>' . $innerArray['date'] . ' </td>';
                                             echo '<td>' . $innerArray['hijri'] . ' </td>';
@@ -114,7 +114,7 @@
         </div>
     </div>
     <!-- Footer scripts, and functions -->
-    <?php require_once 'includes/footer.php'; ?>
+    <?php require_once '../../includes/footer.php'; ?>
 </body>
 
 </html>
